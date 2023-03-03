@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Application.TBadminScreen">
+   <children>
+      <FlowPane alignment="TOP_CENTER" columnHalignment="CENTER" layoutY="62.0" prefHeight="339.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="projetsTableView" prefHeight="294.0" prefWidth="599.0">
+               <columns>
+                  <TableColumn fx:id="projetsColumn" prefWidth="598.4000122070313" text="Projet" />
+               </columns>
+            </TableView>
+            <Button fx:id="supprimerProjetButton" alignment="CENTER" mnemonicParsing="false" text="Supprimer" />
+         </children>
+      </FlowPane>
+      <FlowPane layoutY="62.0" prefHeight="339.0" prefWidth="600.0">
+         <children>
+            <TableView fx:id="utilisateursTableView" prefHeight="294.0" prefWidth="599.0">
+              <columns>
+                <TableColumn fx:id="utilisateursColumn" prefWidth="414.4000244140625" text="Utilisateur" />
+                <TableColumn fx:id="rolesColumn" prefWidth="183.99993896484375" text="Rôles" />
+              </columns>
+            </TableView>
+         </children>
+      </FlowPane>
+      <GridPane prefHeight="62.0" prefWidth="600.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="gestionUtilisateursButton" mnemonicParsing="false" text="Gestion utilisateurs" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Button fx:id="gestionProjetsButton" mnemonicParsing="false" text="Gestion projet" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>
